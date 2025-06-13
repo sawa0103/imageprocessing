@@ -111,6 +111,22 @@ pytest -n auto
 
 Data used by the tests is included in the `data` folder.
 
+### Quick RGB preview
+
+The script `combine_rgb.py` offers a minimal example of generating an RGB image
+from individual band TIFF files without using the rest of the MicaSense
+library.  Provide the blue, green and red band file paths followed by an output
+filename:
+
+```bash
+python combine_rgb.py data/REDEDGE-MX/IMG_0001_1.tif \
+                    data/REDEDGE-MX/IMG_0001_2.tif \
+                    data/REDEDGE-MX/IMG_0001_3.tif \
+                    -o preview.jpg
+```
+
+If no band arguments are supplied, the above sample files are used by default.
+
 ### For (Tutorial) Developers
 
 To generate the HTML pages after updating the jupyter notebooks, run the following command in the repository directory:
